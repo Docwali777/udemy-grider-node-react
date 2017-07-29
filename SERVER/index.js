@@ -2,7 +2,7 @@ import express from 'express'
 const app = express()
 const PORT = process.env.PORT || 3000
 
-import '../AUTH-PASSPORT/userAuth'
+require('../AUTH-PASSPORT/userAuth')
 
 require('../ROUTES/google_Auth')(app)
 
