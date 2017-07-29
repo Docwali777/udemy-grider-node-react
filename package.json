@@ -18,6 +18,6 @@
   "scripts": {
     "dev:server": "nodemon server/index.js --exec babel-node",
     "dev:server-build": "babel SERVER -d dist",
-    "start": "node index.js"
+    "start": "node SERVER/index.js"
   }
 }
