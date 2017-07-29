@@ -1,5 +1,6 @@
 
 const express = require('express');
+const path = require('path');
 const app = express()
 const PORT = process.env.PORT || 3000
 const cookieSession = require('cookie-session')
@@ -21,10 +22,31 @@ app.use(
 app.use(passport.initialize())
 app.use(passport.session())
 
+
 require('../ROUTES/google_Auth')(app)
 
-app.get('/', (req, res)=>{
-  res.send({message: "Dev Server"})
+
+//webpack HMR
+const webpack = require('webpack');
+const devMiddleware = require('webpack-dev-middleware')
+const hotMiddleware = require('webpack-hot-middleware')
+const config = require('../webpack.dev')
+
+const compiler = webpack(config)
+const middleware = devMiddleware(compiler, {
+  publicPath: config.output.publicPath,
+  noInfo: true,
+  log: false,
+  quiet: true
+})
+
+app.use(express.static('public'))
+app.use(middleware)
+app.use(hotMiddleware(compiler))
+
+
+app.get('/*', (req, res)=>{
+res.sendFile(path.resolve(__dirname, 'public', 'index.html'))
 })
 
 mongoose.connect(keys.MONGODB_URI, { useMongoClient: true})
