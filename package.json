@@ -19,7 +19,7 @@
     "nodemon": "^1.11.0"
   },
   "scripts": {
-    "dev:server": "nodemon server/index.js",
+    "dev": "nodemon SERVER/index.js & --env='dev'",
     "dev:server-build": "babel SERVER -d dist",
     "start": "node SERVER/index.js"
   }
