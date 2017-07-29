@@ -1,6 +1,6 @@
 const passport = require('passport');
 const GoogleStrategy = require('passport-google-oauth20').Strategy
-let key;
+let keys;
 
 if(process.env.NODE_ENV !== 'production'){
    keys = require('../PASSWORDS_PRIVATE_INFO/keys');
