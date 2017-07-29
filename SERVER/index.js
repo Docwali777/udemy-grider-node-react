@@ -1,6 +1,3 @@
-require('babel-register')({
-  presets: ["es2015", "stage-1"]
-})
 
 const express = require('express');
 const app = express()
