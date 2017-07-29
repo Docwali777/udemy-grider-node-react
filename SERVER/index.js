@@ -26,23 +26,7 @@ app.use(passport.session())
 require('../ROUTES/google_Auth')(app)
 
 
-//webpack HMR
-const webpack = require('webpack');
-const devMiddleware = require('webpack-dev-middleware')
-const hotMiddleware = require('webpack-hot-middleware')
-const config = require('../webpack.dev')
-
-const compiler = webpack(config)
-const middleware = devMiddleware(compiler, {
-  publicPath: config.output.publicPath,
-  noInfo: true,
-  log: false,
-  quiet: true
-})
-
 app.use(express.static('public'))
-app.use(middleware)
-app.use(hotMiddleware(compiler))
 
 
 app.get('/*', (req, res)=>{
