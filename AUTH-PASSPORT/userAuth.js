@@ -1,6 +1,6 @@
-import passport from 'passport'
+const passport = require('passport');
 const GoogleStrategy = require('passport-google-oauth20').Strategy
-import keys from '../PASSWORDS_PRIVATE_INFO/keys'
+const keys = require('../PASSWORDS_PRIVATE_INFO/keys');
 
 
 passport.use(

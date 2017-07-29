@@ -1,6 +1,6 @@
-import express from 'express'
+const express = require('express');
 const app = express()
-import passport from 'passport'
+const passport = require('passport');
 
 
 module.exports = (app) =>{
