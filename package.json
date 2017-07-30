@@ -58,7 +58,7 @@
   "scripts": {
     "dev": " webpack --env='dev'",
     "devserver": "node SERVER/indexDevserver.js ",
-    "start": "node index.js",
+    "start": "node SERVER/index.js",
     "server": "concurrently \"yarn run devserver\" \"yarn run dev \"  ",
     "build": "webpack --env=prod --progress --profile --colors"
   }
