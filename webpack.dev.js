@@ -8,7 +8,7 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
 module.exports = {
   entry: [
     'webpack-hot-middleware/client?reload=true',
-    path.join(__dirname, './src/app.js')
+    path.join(__dirname, './src/index.js')
   ],
   output: {
     filename: 'bundle.js',
@@ -52,7 +52,7 @@ module.exports = {
     new webpack.NoEmitOnErrorsPlugin(),
     new HtmlWebpackPlugin({
       title: 'Node and React Full Stack',
-      template: './src/index.html',
+      template: path.join(__dirname,'./src/index.html'),
       filename: 'index.html',
       link: 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css'
     }),

@@ -19,7 +19,8 @@ function(req, res) {
 
 app.get('/api/logout', (req, res)=>{
   req.logout()
-  res.send({message: 'You have logged out'})
+  // res.send({message: 'You have logged out'})
+  res.redirect('/')
 })
 
 app.get('/api/callback_user', (req, res)=>{
