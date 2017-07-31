@@ -1,6 +1,7 @@
 
 const express = require('express');
 const path = require('path');
+const cors = require('cors');
 const app = express()
 const PORT = process.env.PORT || 3000
 const cookieSession = require('cookie-session')
@@ -12,7 +13,9 @@ const keys = require('./PASSWORDS_PRIVATE_INFO/keys')
 require('./MODELS/user')
 require('./AUTH-PASSPORT/userAuth')
 
+app.use(cors())
 app.use(express.static('public'))
+
 
 app.use(
   cookieSession({

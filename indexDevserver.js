@@ -1,6 +1,7 @@
 
 const express = require('express');
 const path = require('path');
+const cors = require('cors');
 const app = express()
 const PORT = process.env.PORT || 3000
 const cookieSession = require('cookie-session')
@@ -36,6 +37,7 @@ app.use(passport.session())
 
 require('./ROUTES/google_Auth')(app)
 
+app.use(cors())
 app.use(express.static('public'))
 app.use(middleware)
 app.use(hotMiddleware(compiler))
