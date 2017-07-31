@@ -7,11 +7,11 @@ const cookieSession = require('cookie-session')
 const passport = require('passport');
 const mongoose = require('mongoose');
 mongoose.Promise = global.Promise
-const keys = require('../PASSWORDS_PRIVATE_INFO/keys')
+const keys = require('./PASSWORDS_PRIVATE_INFO/keys')
 
 
-require('../MODELS/user')
-require('../AUTH-PASSPORT/userAuth')
+require('./MODELS/user')
+require('./AUTH-PASSPORT/userAuth')
 
 app.use(
   cookieSession({
@@ -23,7 +23,7 @@ app.use(passport.initialize())
 app.use(passport.session())
 
 
-require('../ROUTES/google_Auth')(app)
+require('./ROUTES/google_Auth')(app)
 
 
 app.use(express.static('public'))

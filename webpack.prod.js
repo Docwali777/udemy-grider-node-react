@@ -42,6 +42,8 @@ module.exports = {
     ]
   },
   plugins: [
+    new webpack.optimize.OccurrenceOrderPlugin(),
+    new webpack.NoEmitOnErrorsPlugin(),
     new webpack.optimize.UglifyJsPlugin({
       beautify: false,
       mangle: {
