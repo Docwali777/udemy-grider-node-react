@@ -6,11 +6,10 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
 
 
 module.exports = {
-  entry: './src/index.js',
+  entry: ["babel-polyfill",'./src/index.js'],
   output: {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'public'),
-    publicPath: '/'
   },
   module: {
     rules: [
@@ -19,7 +18,7 @@ module.exports = {
         exclude: /node_modules/,
         loader: 'babel-loader',
         query: {
-          presets: ['es2015', 'react', 'stage-1']
+          presets: ['es2015', 'react', 'stage-0']
         }
       },
       {

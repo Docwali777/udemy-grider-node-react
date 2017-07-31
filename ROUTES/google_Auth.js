@@ -14,7 +14,7 @@ app.get('/auth/google/callback', passport.authenticate('google', {
 }),
 function(req, res) {
   // Successful authentication, redirect home.
-  res.redirect('/api/callback_user');
+  res.redirect('/surveys');
 })
 
 app.get('/api/logout', (req, res)=>{
@@ -24,7 +24,7 @@ app.get('/api/logout', (req, res)=>{
 })
 
 app.get('/api/callback_user', (req, res)=>{
-  res.send({user: req.user})
+  res.send(req.user)
 })
 
 

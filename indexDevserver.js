@@ -7,12 +7,12 @@ const cookieSession = require('cookie-session')
 const passport = require('passport');
 const mongoose = require('mongoose');
 mongoose.Promise = global.Promise
-const keys = require('../PASSWORDS_PRIVATE_INFO/keys')
+const keys = require('./PASSWORDS_PRIVATE_INFO/keys')
 
 const webpack = require('webpack');
 const devMiddleware = require('webpack-dev-middleware')
 const hotMiddleware = require('webpack-hot-middleware')
-const config = require('../webpack.dev')
+const config = require('./webpack.dev')
 
 const compiler = webpack(config)
 
@@ -21,8 +21,8 @@ const middleware = devMiddleware(compiler, {
   noInfo: true
 })
 
-require('../MODELS/user')
-require('../AUTH-PASSPORT/userAuth')
+require('./MODELS/user')
+require('./AUTH-PASSPORT/userAuth')
 
 app.use(
   cookieSession({
@@ -34,11 +34,12 @@ app.use(passport.initialize())
 app.use(passport.session())
 
 
-require('../ROUTES/google_Auth')(app)
+require('./ROUTES/google_Auth')(app)
 
+app.use(express.static('public'))
 app.use(middleware)
 app.use(hotMiddleware(compiler))
-app.use(express.static('public'))
+
 
 
 app.get('/*', (req, res)=>{
