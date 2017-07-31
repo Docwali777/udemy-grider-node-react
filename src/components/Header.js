@@ -21,6 +21,7 @@ renderContent = () =>{
   }
 }
   render() {
+    console.log(this.props.auth === false || null);
     return (
 
       <nav>
@@ -29,7 +30,7 @@ renderContent = () =>{
           <Link to={this.props.auth ? '/surveys' : '/'} className="left brand-logo">Emaily</Link>
           <ul className="right">
             <li>
-              {this.renderContent()}
+              {this.props.auth == false ? <a href="/auth/google">Login With Google</a> : <a href="/api/logout">Logout</a>   }
             </li>
           </ul>
         </div>

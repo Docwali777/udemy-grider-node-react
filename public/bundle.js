@@ -13905,14 +13905,18 @@
         return _inherits(Header, e), r(Header, [ {
             key: "render",
             value: function() {
-                return i.default.createElement("nav", null, i.default.createElement("div", {
+                return console.log(!1 === this.props.auth || null), i.default.createElement("nav", null, i.default.createElement("div", {
                     className: "nav-wrapper"
                 }, i.default.createElement(l.Link, {
                     to: this.props.auth ? "/surveys" : "/",
                     className: "left brand-logo"
                 }, "Emaily"), i.default.createElement("ul", {
                     className: "right"
-                }, i.default.createElement("li", null, this.renderContent()))));
+                }, i.default.createElement("li", null, 0 == this.props.auth ? i.default.createElement("a", {
+                    href: "/auth/google"
+                }, "Login With Google") : i.default.createElement("a", {
+                    href: "/api/logout"
+                }, "Logout")))));
             }
         } ]), Header;
     }(o.Component);
