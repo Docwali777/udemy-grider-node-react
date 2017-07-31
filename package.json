@@ -52,7 +52,7 @@
     "webpack-hot-middleware": "^2.18.2"
   },
   "scripts": {
-    "dev": " webpack --env='dev'",
+    "dev": " webpack --env=dev ",
     "devserver": "node indexDevserver.js ",
     "start": "node index.js",
     "server": "concurrently \"yarn run devserver\" \"yarn run dev \"  ",

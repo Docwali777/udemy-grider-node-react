@@ -12,6 +12,8 @@ const keys = require('./PASSWORDS_PRIVATE_INFO/keys')
 require('./MODELS/user')
 require('./AUTH-PASSPORT/userAuth')
 
+app.use(express.static('public'))
+
 app.use(
   cookieSession({
     maxAge: 30 * 24 * 60 * 60 * 1000,
@@ -23,10 +25,6 @@ app.use(passport.session())
 
 
 require('./ROUTES/google_Auth')(app)
-
-
-app.use(express.static('public'))
-
 
 app.get('/*', (req, res)=>{
 res.sendFile(path.resolve(__dirname, 'public', 'index.html'))
