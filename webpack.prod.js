@@ -45,7 +45,11 @@ module.exports = {
     new webpack.optimize.OccurrenceOrderPlugin(),
     new webpack.NoEmitOnErrorsPlugin(),
     new webpack.optimize.UglifyJsPlugin({
-      beautify: false,
+      parallel: {
+      cache: true,
+      workers: 2 // for e.g
+    },
+      beautify: true,
       mangle: {
         screw_ie8: true,
         keep_fnames: true
@@ -53,7 +57,8 @@ module.exports = {
       compress: {
         screw_ie8: true
       },
-      comments: false
+      comments: false,
+      warnings: false
     }),
    new webpack.DefinePlugin({
      'process.env.NODE_ENV': JSON.stringify('production')
@@ -65,8 +70,10 @@ module.exports = {
       link: 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css'
     }),
     new CleanWebpackPlugin(['public'], {
-      verbose: true,
-      dry: false
-    })
+      verbose: false,
+      dry: true
+    }),
+    new webpack.optimize.MinChunkSizePlugin({minChunkSize: 10000}),
+    new webpack.optimize.LimitChunkCountPlugin({maxChunks: 15})
   ]
 }

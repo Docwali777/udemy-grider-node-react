@@ -29,7 +29,7 @@ renderContent = () =>{
           <Link to={this.props.auth ? '/surveys' : '/'} className="left brand-logo">Emaily</Link>
           <ul className="right">
             <li>
-                {this.props.auth == false || null ?  <a href='/auth/google'>Login</a> : <a href='/api/logout'>Logout</a>}
+              {this.renderContent()}
             </li>
           </ul>
         </div>
