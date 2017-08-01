@@ -4,6 +4,7 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 
+const keys =  require('./env.development')
 
 module.exports = {
   entry: [
@@ -60,6 +61,9 @@ module.exports = {
     new CleanWebpackPlugin(['public'], {
       verbose: true,
       dry: false
-    })
+    }),
+    new webpack.DefinePlugin({
+      'process.env.REACT_APP_STRIPE_KEY': JSON.stringify(keys.REACT_APP_STRIPE_KEY)
+    }),
   ]
 }

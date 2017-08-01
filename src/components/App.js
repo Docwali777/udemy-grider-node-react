@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import {render} from 'react-dom'
+
 import {connect} from 'react-redux'
 import * as actions from '../redux-actions'
 import {BrowserRouter, Route} from 'react-router-dom'

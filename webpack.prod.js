@@ -61,7 +61,8 @@ module.exports = {
       warnings: false
     }),
    new webpack.DefinePlugin({
-     'process.env.NODE_ENV': JSON.stringify('production')
+     'process.env.NODE_ENV': JSON.stringify('production'),
+     'process.env.REACT_APP_STRIPE_KEY'
    }),
     new HtmlWebpackPlugin({
       title: 'Node and React Full Stack',

@@ -6,6 +6,7 @@ import {fetchUser} from '../redux-actions/index'
 
 import { Link } from 'react-router-dom'
 
+import Payments from './payments'
 
 
 class Header extends Component {
@@ -17,7 +18,12 @@ renderContent = () =>{
     case false:
       return (<a href="/auth/google">Login With Google</a>)
 
-    default: return  (<a href="/api/logout">Logout</a>)
+    default: return(
+
+      <div>  <li><Payments /></li>
+      <li>  <a href="/api/logout">Logout</a> </li>
+    </div>  )
+
   }
 }
   render() {
@@ -28,9 +34,9 @@ renderContent = () =>{
         <div className="nav-wrapper">
           <Link to={this.props.auth ? '/surveys' : '/'} className="left brand-logo">Emaily</Link>
           <ul className="right">
-            <li>
+
               {this.renderContent()}
-            </li>
+
           </ul>
         </div>
       </nav>
