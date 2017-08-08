@@ -4,6 +4,8 @@ import {connect} from 'react-redux'
 import * as actions from '../redux-actions'
 import {BrowserRouter, Route} from 'react-router-dom'
 
+import keys from '../../PASSWORDS_PRIVATE_INFO/prod'
+console.log(keys);
 
 import Header from './Header'
 const DashBoard = () => <h2>Dash Board</h2>
