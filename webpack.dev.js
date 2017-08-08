@@ -5,7 +5,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 
 const keys =  require('./env.development')
-
+console.log(keys.REACT_APP_STRIPE_KEY);
 module.exports = {
   entry: [
     "babel-polyfill",
@@ -25,7 +25,8 @@ module.exports = {
         exclude: /node_modules/,
         loader: 'babel-loader',
         query: {
-          presets: ['es2015', 'react', 'stage-0']
+          presets: ['es2017', 'react', 'stage-0'],
+           plugins: ['transform-runtime', 'transform-decorators-legacy', 'transform-class-properties'],
         }
       },
       {

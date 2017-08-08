@@ -1,6 +1,8 @@
 const webpack = require('webpack');
 const path = require('path');
 
+const keys  = require('./env.production')
+
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 
@@ -62,7 +64,7 @@ module.exports = {
     }),
    new webpack.DefinePlugin({
      'process.env.NODE_ENV': JSON.stringify('production'),
-     'process.env.REACT_APP_STRIPE_KEY'
+     'process.env.REACT_APP_STRIPE_KEY': JSON.stringify('pk_test_rM0r4CXtfaDluXMl9zvDq9I4')
    }),
     new HtmlWebpackPlugin({
       title: 'Node and React Full Stack',
