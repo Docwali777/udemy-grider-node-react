@@ -33,9 +33,9 @@ renderContent = () =>{
 
       <nav>
 
-        <div className="nav-wrapper">
+        <div className="">
           <Link to={this.props.auth ? '/surveys' : '/'} className="left brand-logo">Emaily</Link>
-          <ul className="right">
+          <ul className="">
 
 
               {this.renderContent()}

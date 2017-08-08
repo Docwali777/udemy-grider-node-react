@@ -75,7 +75,7 @@ var Header = function (_Component) {
           );
 
         default:
-          return [_react2.default.createElement(
+          return _react2.default.createElement(
             'div',
             null,
             '  ',
@@ -101,7 +101,7 @@ var Header = function (_Component) {
               ),
               ' '
             )
-          )];
+          );
 
       }
     }, _temp), (0, _possibleConstructorReturn3.default)(_this, _ret);
@@ -116,7 +116,7 @@ var Header = function (_Component) {
         null,
         _react2.default.createElement(
           'div',
-          { className: 'nav-wrapper' },
+          { className: '' },
           _react2.default.createElement(
             _reactRouterDom.Link,
             { to: this.props.auth ? '/surveys' : '/', className: 'left brand-logo' },
@@ -124,7 +124,7 @@ var Header = function (_Component) {
           ),
           _react2.default.createElement(
             'ul',
-            { className: 'right' },
+            { className: '' },
             this.renderContent(),
             _react2.default.createElement(
               'li',

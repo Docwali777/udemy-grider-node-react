@@ -2,7 +2,6 @@ const express = require('express');
 const app = express()
 const passport = require('passport');
 
-
 module.exports = (app) =>{
 app.get('/auth/google',
     passport.authenticate('google', {
@@ -11,7 +10,7 @@ app.get('/auth/google',
 )
 
 app.get('/auth/google/callback', passport.authenticate('google', {
-  failureRedirect: '/surveys'
+  failureRedirect: '/'
 }),
 function(req, res) {
   // Successful authentication, redirect home.

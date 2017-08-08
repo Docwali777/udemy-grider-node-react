@@ -14976,12 +14976,12 @@
             key: "render",
             value: function() {
                 return console.log(this.props.auth), h.default.createElement("nav", null, h.default.createElement("div", {
-                    className: "nav-wrapper"
+                    className: ""
                 }, h.default.createElement(m.Link, {
                     to: this.props.auth ? "/surveys" : "/",
                     className: "left brand-logo"
                 }, "Emaily"), h.default.createElement("ul", {
-                    className: "right"
+                    className: ""
                 }, this.renderContent(), h.default.createElement("li", null, this.props.auth ? h.default.createElement("a", {
                     href: "/auth/google"
                 }, "Login With Google") : h.default.createElement("a", {
