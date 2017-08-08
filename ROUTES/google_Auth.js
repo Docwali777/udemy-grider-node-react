@@ -1,7 +1,7 @@
 const express = require('express');
 const app = express()
 const passport = require('passport');
-
+console.log(2)
 module.exports = (app) =>{
 app.get('/auth/google',
     passport.authenticate('google', {
