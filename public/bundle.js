@@ -8495,7 +8495,7 @@
         };
     }
     n(478);
-    var r = n(1), o = _interopRequireDefault(r), i = n(150), a = n(116), l = n(117), u = n(608), c = _interopRequireDefault(u), s = n(609), f = _interopRequireDefault(s), p = n(749), d = _interopRequireDefault(p), h = (0, 
+    var r = n(1), o = _interopRequireDefault(r), i = n(150), a = n(116), l = n(117), u = n(608), c = _interopRequireDefault(u), s = n(609), f = _interopRequireDefault(s), p = n(750), d = _interopRequireDefault(p), h = (0, 
     l.createStore)(d.default, {}, (0, l.applyMiddleware)(c.default));
     (0, i.render)(o.default.createElement(a.Provider, {
         store: h
@@ -12886,13 +12886,11 @@
         var t = {};
         if (null != e) for (var n in e) Object.prototype.hasOwnProperty.call(e, n) && (t[n] = e[n]);
         return t.default = e, t;
-    }(m), g = n(286), y = n(705), x = _interopRequireDefault(y), w = n(706), A = _interopRequireDefault(w), k = n(709), P = _interopRequireDefault(k);
-    console.log(x.default);
-    var C = function() {
+    }(m), g = n(286), y = n(705), x = (_interopRequireDefault(y), n(707)), w = _interopRequireDefault(x), A = n(710), k = _interopRequireDefault(A), P = function() {
         return h.default.createElement("h2", null, "Dash Board");
-    }, E = function() {
+    }, C = function() {
         return h.default.createElement("h2", null, "Survey New");
-    }, R = function(e) {
+    }, E = function(e) {
         function App() {
             return (0, a.default)(this, App), (0, s.default)(this, (App.__proto__ || (0, o.default)(App)).apply(this, arguments));
         }
@@ -12904,22 +12902,22 @@
         }, {
             key: "render",
             value: function() {
-                return h.default.createElement("div", null, h.default.createElement(g.BrowserRouter, null, h.default.createElement("div", null, h.default.createElement(A.default, null), h.default.createElement(g.Route, {
+                return h.default.createElement("div", null, h.default.createElement(g.BrowserRouter, null, h.default.createElement("div", null, h.default.createElement(w.default, null), h.default.createElement(g.Route, {
                     exact: !0,
                     path: "/",
-                    component: P.default
+                    component: k.default
                 }), h.default.createElement(g.Route, {
                     exact: !0,
                     path: "/surveys",
-                    component: C
+                    component: P
                 }), h.default.createElement(g.Route, {
                     path: "/surveys/new",
-                    component: E
+                    component: C
                 }))));
             }
         } ]), App;
     }(d.Component);
-    t.default = (0, b.connect)(null, v)(R);
+    t.default = (0, b.connect)(null, v)(E);
 }, function(e, t, n) {
     n(611), e.exports = n(30).Object.getPrototypeOf;
 }, function(e, t, n) {
@@ -14937,6 +14935,9 @@
     });
 }, function(e, t, n) {
     "use strict";
+    e.exports = n(706);
+}, function(e, t, n) {
+    "use strict";
     (function(t) {
         e.exports = {
             googleClientID: t.env.GOOGLE_CLIENT_ID,
@@ -14963,7 +14964,7 @@
         value: !0
     });
     var r = n(170), o = _interopRequireDefault(r), i = n(177), a = _interopRequireDefault(i), l = n(178), u = _interopRequireDefault(l), c = n(179), s = _interopRequireDefault(c), f = n(186), p = _interopRequireDefault(f), d = n(1), h = _interopRequireDefault(d), b = n(116), m = (n(117), 
-    n(187), n(286)), v = n(707), g = _interopRequireDefault(v), y = function(e) {
+    n(187), n(286)), v = n(708), g = _interopRequireDefault(v), y = function(e) {
         function Header() {
             var e, t, n, r;
             (0, a.default)(this, Header);
@@ -15015,7 +15016,7 @@
     Object.defineProperty(t, "__esModule", {
         value: !0
     });
-    var r = n(170), o = _interopRequireDefault(r), i = n(177), a = _interopRequireDefault(i), l = n(178), u = _interopRequireDefault(l), c = n(179), s = _interopRequireDefault(c), f = n(186), p = _interopRequireDefault(f), d = n(1), h = _interopRequireDefault(d), b = n(708), m = _interopRequireDefault(b), v = n(116), g = n(187), y = function(e) {
+    var r = n(170), o = _interopRequireDefault(r), i = n(177), a = _interopRequireDefault(i), l = n(178), u = _interopRequireDefault(l), c = n(179), s = _interopRequireDefault(c), f = n(186), p = _interopRequireDefault(f), d = n(1), h = _interopRequireDefault(d), b = n(709), m = _interopRequireDefault(b), v = n(116), g = n(187), y = function(e) {
         if (e && e.__esModule) return e;
         var t = {};
         if (null != e) for (var n in e) Object.prototype.hasOwnProperty.call(e, n) && (t[n] = e[n]);
@@ -15357,7 +15358,7 @@
         return e && e.__esModule ? e : {
             default: e
         };
-    }(r), i = (n(710), function() {
+    }(r), i = (n(711), function() {
         return o.default.createElement("div", {
             className: "center"
         }, o.default.createElement("h1", null, "Emaily"), "Collect from your users", o.default.createElement("hr", null));
@@ -15373,7 +15374,7 @@
     Object.defineProperty(t, "__esModule", {
         value: !0
     }), t.Toast = t.Tag = t.Tabs = t.Table = t.Tab = t.Slider = t.Slide = t.SideNavItem = t.SideNav = t.Section = t.SearchForm = t.Row = t.ProgressBar = t.Preloader = t.Parallax = t.PaginationButton = t.Pagination = t.OverlayTrigger = t.Overlay = t.Navbar = t.NavItem = t.Modal = t.MenuItem = t.MediaBox = t.Input = t.Icon = t.Footer = t.Dropdown = t.Divider = t.Container = t.CollectionItem = t.Collection = t.CollapsibleItem = t.Collapsible = t.Col = t.Chip = t.CardTitle = t.CardPanel = t.Card = t.Carousel = t.Button = t.Breadcrumb = t.Badge = t.Autocomplete = void 0;
-    var r = n(711), o = _interopRequireDefault(r), i = n(712), a = _interopRequireDefault(i), l = n(713), u = _interopRequireDefault(l), c = n(193), s = _interopRequireDefault(c), f = n(714), p = _interopRequireDefault(f), d = n(715), h = _interopRequireDefault(d), b = n(716), m = _interopRequireDefault(b), v = n(717), g = _interopRequireDefault(v), y = n(290), x = _interopRequireDefault(y), w = n(81), A = _interopRequireDefault(w), k = n(718), P = _interopRequireDefault(k), C = n(719), E = _interopRequireDefault(C), R = n(720), O = _interopRequireDefault(R), S = n(721), T = _interopRequireDefault(S), j = n(722), N = _interopRequireDefault(j), D = n(723), M = _interopRequireDefault(D), B = n(724), H = _interopRequireDefault(B), I = n(725), F = _interopRequireDefault(I), X = n(47), q = _interopRequireDefault(X), z = n(726), L = _interopRequireDefault(z), W = n(727), U = _interopRequireDefault(W), V = n(728), Z = _interopRequireDefault(V), G = n(729), K = _interopRequireDefault(G), Q = n(730), J = _interopRequireDefault(Q), Y = n(731), _ = _interopRequireDefault(Y), $ = n(292), ee = _interopRequireDefault($), te = n(291), ne = _interopRequireDefault(te), re = n(732), oe = _interopRequireDefault(re), ie = n(293), ae = _interopRequireDefault(ie), le = n(733), ue = _interopRequireDefault(le), ce = n(734), se = _interopRequireDefault(ce), fe = n(736), pe = _interopRequireDefault(fe), de = n(123), he = _interopRequireDefault(de), be = n(737), me = _interopRequireDefault(be), ve = n(738), ge = _interopRequireDefault(ve), ye = n(739), xe = _interopRequireDefault(ye), we = n(740), Ae = _interopRequireDefault(we), ke = n(742), Pe = _interopRequireDefault(ke), Ce = n(743), Ee = _interopRequireDefault(Ce), Re = n(744), Oe = _interopRequireDefault(Re), Se = n(745), Te = _interopRequireDefault(Se), je = n(746), Ne = _interopRequireDefault(je), De = n(747), Me = _interopRequireDefault(De), Be = n(748), He = _interopRequireDefault(Be);
+    var r = n(712), o = _interopRequireDefault(r), i = n(713), a = _interopRequireDefault(i), l = n(714), u = _interopRequireDefault(l), c = n(193), s = _interopRequireDefault(c), f = n(715), p = _interopRequireDefault(f), d = n(716), h = _interopRequireDefault(d), b = n(717), m = _interopRequireDefault(b), v = n(718), g = _interopRequireDefault(v), y = n(290), x = _interopRequireDefault(y), w = n(81), A = _interopRequireDefault(w), k = n(719), P = _interopRequireDefault(k), C = n(720), E = _interopRequireDefault(C), R = n(721), O = _interopRequireDefault(R), S = n(722), T = _interopRequireDefault(S), j = n(723), N = _interopRequireDefault(j), D = n(724), M = _interopRequireDefault(D), B = n(725), H = _interopRequireDefault(B), I = n(726), F = _interopRequireDefault(I), X = n(47), q = _interopRequireDefault(X), z = n(727), L = _interopRequireDefault(z), W = n(728), U = _interopRequireDefault(W), V = n(729), Z = _interopRequireDefault(V), G = n(730), K = _interopRequireDefault(G), Q = n(731), J = _interopRequireDefault(Q), Y = n(732), _ = _interopRequireDefault(Y), $ = n(292), ee = _interopRequireDefault($), te = n(291), ne = _interopRequireDefault(te), re = n(733), oe = _interopRequireDefault(re), ie = n(293), ae = _interopRequireDefault(ie), le = n(734), ue = _interopRequireDefault(le), ce = n(735), se = _interopRequireDefault(ce), fe = n(737), pe = _interopRequireDefault(fe), de = n(123), he = _interopRequireDefault(de), be = n(738), me = _interopRequireDefault(be), ve = n(739), ge = _interopRequireDefault(ve), ye = n(740), xe = _interopRequireDefault(ye), we = n(741), Ae = _interopRequireDefault(we), ke = n(743), Pe = _interopRequireDefault(ke), Ce = n(744), Ee = _interopRequireDefault(Ce), Re = n(745), Oe = _interopRequireDefault(Re), Se = n(746), Te = _interopRequireDefault(Se), je = n(747), Ne = _interopRequireDefault(je), De = n(748), Me = _interopRequireDefault(De), Be = n(749), He = _interopRequireDefault(Be);
     t.Autocomplete = o.default, t.Badge = a.default, t.Breadcrumb = u.default, t.Button = s.default, 
     t.Carousel = p.default, t.Card = h.default, t.CardPanel = m.default, t.CardTitle = g.default, 
     t.Chip = x.default, t.Col = A.default, t.Collapsible = P.default, t.CollapsibleItem = E.default, 
@@ -17435,7 +17436,7 @@
         return function(e, t, n) {
             return t && defineProperties(e.prototype, t), n && defineProperties(e, n), e;
         };
-    }(), o = n(1), i = _interopRequireDefault(o), a = n(2), l = _interopRequireDefault(a), u = n(5), c = _interopRequireDefault(u), s = n(735), f = _interopRequireDefault(s), p = [ "blue", "red", "yellow", "green" ], d = function(e) {
+    }(), o = n(1), i = _interopRequireDefault(o), a = n(2), l = _interopRequireDefault(a), u = n(5), c = _interopRequireDefault(u), s = n(736), f = _interopRequireDefault(s), p = [ "blue", "red", "yellow", "green" ], d = function(e) {
         function Preloader() {
             return _classCallCheck(this, Preloader), _possibleConstructorReturn(this, (Preloader.__proto__ || Object.getPrototypeOf(Preloader)).apply(this, arguments));
         }
@@ -17722,7 +17723,7 @@
         return function(e, t, n) {
             return t && defineProperties(e.prototype, t), n && defineProperties(e, n), e;
         };
-    }(), i = n(1), a = _interopRequireDefault(i), l = n(2), u = _interopRequireDefault(l), c = n(5), s = _interopRequireDefault(c), f = n(741), p = function(e) {
+    }(), i = n(1), a = _interopRequireDefault(i), l = n(2), u = _interopRequireDefault(l), c = n(5), s = _interopRequireDefault(c), f = n(742), p = function(e) {
         function SideNavItem() {
             return _classCallCheck(this, SideNavItem), _possibleConstructorReturn(this, (SideNavItem.__proto__ || Object.getPrototypeOf(SideNavItem)).apply(this, arguments));
         }
@@ -18351,7 +18352,7 @@
     Object.defineProperty(t, "__esModule", {
         value: !0
     });
-    var r = n(117), o = n(750), i = function(e) {
+    var r = n(117), o = n(751), i = function(e) {
         return e && e.__esModule ? e : {
             default: e
         };
